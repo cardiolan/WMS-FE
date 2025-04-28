@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Bullseye ASE Compact (WMS + FE)</title>
+<style>
+body { text-align: center; font-family: Arial, sans-serif; background: #f5f5f5; }
+svg { width: 450px; height: 450px; margin: 10px auto; display: block; background: white; }
+.controls { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; max-width: 400px; margin: 10px auto; align-items: center; }
+.controls div { display: flex; align-items: center; justify-content: center; gap: 4px; }
+.controls label { font-weight: bold; font-size: 12px; }
+button { margin: 6px; padding: 8px 15px; font-size: 14px; }
+#wmsResult { margin-top: 10px; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<h2>Bullseye ASE Compact (WMS + FE)</h2>
+
+<div id="bullseye-container">
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+
+    <path id="seg5" d="
+        M 520.0 300.0
+        A 220 220 0 0 1 410.0 490.5255888325765
+        L 380.0 438.56406460551017
+        A 160 160 0 0 0 460.0 300.0
+        Z" fill="#FFFFFF" stroke="black" stroke-width="1"/>
+    <text x="464.5448267190434" y="390.0" text-anchor="middle" alignment-baseline="middle" font-size="14" fill="black">5</text>
+    <text x="464.5448267190434" y="407.0" text-anchor="middle" alignment-baseline="middle" font-size="10" fill="black">Basal inféro-latéral</text>
+    
+    <path id="seg4" d="
+        M 410.0 490.5255888325765
+        A 220 220 0 0 1 190.00000000000006 490.52558883257655
+        L 220.00000000000003 438.5640646055102
+        A 160 160 0 0 0 380.0 438.56406460551017
+        Z" fill="#FFFFFF" stroke="black" stroke-width="1"/>
+    <text x="300.0" y="485.0" text-anchor="middle" alignment-baseline="middle" font-size="14" fill="black">4</text>
+    <text x="300.0" y="502.0" text-anchor="middle" alignment-baseline="middle" font-size="10" fill="black">Basal inférieur</text>
+    
+    <path id="seg3" d="
+        M 190.00000000000006 490.52558883257655
+        A 220 220 0 0 1 80.0 300.0
+        L 140.0 300.0
+        A 160 160 0 0 0 220.00000000000003 438.5640646055102
+        Z" fill="#FFFFFF" stroke="black" stroke-width="1"/>
+    <text x="135.45517328095664" y="390.0" text-anchor="middle" alignment-baseline="middle" font-size="14" fill="black">3</text>
+    <text x="135.45517328095664" y="407.0" text-anchor="middle" alignment-baseline="middle" font-size="10" fill="black">Basal inféro-septal</text>
+    
+    <path id="seg2" d="
+        M 80.0 300.0
+        A 220 220 0 0 1 189.9999999999999 109.47441116742357
+        L 219.99999999999994 161.43593539448986
+        A 160 160 0 0 0 140.0 300.0
+        Z" fill="#FFFFFF" stroke="black" stroke-width="1"/>
+    <text x="135.45517328095667" y="200.0" text-anchor="middle" alignment-baseline="middle" font-size="14" fill="black">2</text>
+    <text x="135.45517328095667" y="217.0" text-anchor="middle" alignment-baseline="middle" font-size="10" fill="black">Basal antéro-septal</text>
+    
+    <path id="seg1" d="
+        M 189.9999999999999 109.47441116742357
+        A 220 220 0 0 1 410.0 109.47441116742351
+        L 380.0 161.43593539448983
+        A 160 160 0 0 0 219.99999999999994 161.43593539448986
+        Z" fill="#FFFFFF" stroke="black" stroke-width="1"/>
+    <text x="299.99999999999994" y="105.0" text-anchor="middle" alignment-baseline="middle" font-size="14" fill="black">1</text>
+    <text x="299.99999999999994" y="122.0" text-anchor="middle" alignment-baseline="middle" font-size="10" fill="black">Basal antérieur</text>
+    
+    <path id="seg6" d="
+        M 410.0 109.47441116742351
+        A 220 220 0 0 1 520.0 299.99999999999994
+        L 460.0 299.99999999999994
+        A 160 160 0 0 0 380.0 161.43593539448983
+        Z" fill="#FFFFFF" stroke="black" stroke-width="1"/>
+    <text x="464.5448267190433" y="199.99999999999991" text-anchor="middle" alignment-baseline="middle" font-size="14" fill="black">6</text>
+    <text x="464.5448267190433" y="216.99999999999991" text-anchor="middle" alignment-baseline="middle" font-size="10" fill="black">Basal antéro-latéral</text>
+    
+    <path id="seg11" d="
+        M 460.0 300.0
+        A 160 160 0 0 1 380.0 438.56406460551017
+        L 350.0 386.60254037844385
+        A 100 100 0 0 0 400.0 300.0
+        Z" fill="#FFFFFF" stroke="black" stroke-width="1"/>
+    <text x="412.58330249197707" y="360.0" text-anchor="middle" alignment-baseline="middle" font-size="14" fill="black">11</text>
+    <text x="412.58330249197707" y="377.0" text-anchor="middle" alignment-baseline="middle" font-size="10" fill="black">Mid inféro-latéral</text>
+    
+    <path id="seg10" d="
+        M 380.0 438.56406460551017
+        A 160 160 0 0 1 220.00000000000003 438.5640646055102
+        L 250.00000000000003 386.6025403784439
+        A 100 100 0 0 0 350.0 386.60254037844385
+        Z" fill="#FFFFFF" stroke="black" stroke-width="1"/>
+    <text x="300.0" y="425.0" text-anchor="middle" alignment-baseline="middle" font-size="14" fill="black">10</text>
+    <text x="300.0" y="442.0" text-anchor="middle" alignment-baseline="middle" font-size="10" fill="black">Mid inférieur</text>
+    
+    <path id="seg9" d="
+        M 220.00000000000003 438.5640646055102
+        A 160 160 0 0 1 140.0 300.0
+        L 200.0 300.0
+        A 100 100 0 0 0 250.00000000000003 386.6025403784439
+        Z" fill="#FFFFFF" stroke="black" stroke-width="1"/>
+    <text x="187.41669750802296" y="360.0" text-anchor="middle" alignment-baseline="middle" font-size="14" fill="black">9</text>
+    <text x="187.41669750802296" y="377.0" text-anchor="middle" alignment-baseline="middle" font-size="10" fill="black">Mid inféro-septal</text>
+    
+    <path id="seg8" d="
+        M 140.0 300.0
+        A 160 160 0 0 1 219.99999999999994 161.43593539448986
+        L 249.99999999999994 213.39745962155615
+        A 100 100 0 0 0 200.0 300.0
+        Z" fill="#FFFFFF" stroke="black" stroke-width="1"/>
+    <text x="187.416697508023" y="230.0" text-anchor="middle" alignment-baseline="middle" font-size="14" fill="black">8</text>
+    <text x="187.416697508023" y="247.0" text-anchor="middle" alignment-baseline="middle" font-size="10" fill="black">Mid antéro-septal</text>
+    
+    <path id="seg7" d="
+        M 219.99999999999994 161.43593539448986
+        A 160 160 0 0 1 380.0 161.43593539448983
+        L 350.0 213.39745962155615
+        A 100 100 0 0 0 249.99999999999994 213.39745962155615
+        Z" fill="#FFFFFF" stroke="black" stroke-width="1"/>
+    <text x="300.0" y="165.0" text-anchor="middle" alignment-baseline="middle" font-size="14" fill="black">7</text>
+    <text x="300.0" y="182.0" text-anchor="middle" alignment-baseline="middle" font-size="10" fill="black">Mid antérieur</text>
+    
+    <path id="seg12" d="
+        M 380.0 161.43593539448983
+        A 160 160 0 0 1 460.0 299.99999999999994
+        L 400.0 300.0
+        A 100 100 0 0 0 350.0 213.39745962155615
+        Z" fill="#FFFFFF" stroke="black" stroke-width="1"/>
+    <text x="412.583302491977" y="229.99999999999994" text-anchor="middle" alignment-baseline="middle" font-size="14" fill="black">12</text>
+    <text x="412.583302491977" y="246.99999999999994" text-anchor="middle" alignment-baseline="middle" font-size="10" fill="black">Mid antéro-latéral</text>
+    
+    <path id="seg15" d="
+        M 400.0 300.0
+        A 100 100 0 0 1 300.0 400.0
+        L 300.0 340.0
+        A 40 40 0 0 0 340.0 300.0
+        Z" fill="#FFFFFF" stroke="black" stroke-width="1"/>
+    <text x="349.49747468305833" y="344.49747468305833" text-anchor="middle" alignment-baseline="middle" font-size="14" fill="black">15</text>
+    <text x="349.49747468305833" y="361.49747468305833" text-anchor="middle" alignment-baseline="middle" font-size="10" fill="black">Apical inférieur</text>
+    
+    <path id="seg14" d="
+        M 300.0 400.0
+        A 100 100 0 0 1 200.0 300.0
+        L 260.0 300.0
+        A 40 40 0 0 0 300.0 340.0
+        Z" fill="#FFFFFF" stroke="black" stroke-width="1"/>
+    <text x="250.50252531694167" y="344.49747468305833" text-anchor="middle" alignment-baseline="middle" font-size="14" fill="black">14</text>
+    <text x="250.50252531694167" y="361.49747468305833" text-anchor="middle" alignment-baseline="middle" font-size="10" fill="black">Apical septal</text>
+    
+    <path id="seg13" d="
+        M 200.0 300.0
+        A 100 100 0 0 1 300.0 200.0
+        L 300.0 260.0
+        A 40 40 0 0 0 260.0 300.0
+        Z" fill="#FFFFFF" stroke="black" stroke-width="1"/>
+    <text x="250.50252531694167" y="245.50252531694167" text-anchor="middle" alignment-baseline="middle" font-size="14" fill="black">13</text>
+    <text x="250.50252531694167" y="262.50252531694167" text-anchor="middle" alignment-baseline="middle" font-size="10" fill="black">Apical antérieur</text>
+    
+    <path id="seg16" d="
+        M 300.0 200.0
+        A 100 100 0 0 1 400.0 300.0
+        L 340.0 300.0
+        A 40 40 0 0 0 300.0 260.0
+        Z" fill="#FFFFFF" stroke="black" stroke-width="1"/>
+    <text x="349.49747468305833" y="245.50252531694167" text-anchor="middle" alignment-baseline="middle" font-size="14" fill="black">16</text>
+    <text x="349.49747468305833" y="262.50252531694167" text-anchor="middle" alignment-baseline="middle" font-size="10" fill="black">Apical latéral</text>
+    
+<circle id="seg17" cx="300" cy="300" r="40" fill="#FFFFFF" stroke="black" stroke-width="1"/>
+<text x="300" y="295" text-anchor="middle" alignment-baseline="middle" font-size="14" fill="black">17</text>
+<text x="300" y="312" text-anchor="middle" alignment-baseline="middle" font-size="10" fill="black">Apex</text>
+
+</svg>
+</div>
+
+<div class="controls" id="inputs">
+<div><label for="input1">S1</label><input style="width: 40px;" type="number" id="input1" min="0" max="4" value="0" oninput="updateSegment(1); calculateWMS();"></div>
+<div><label for="input2">S2</label><input style="width: 40px;" type="number" id="input2" min="0" max="4" value="0" oninput="updateSegment(2); calculateWMS();"></div>
+<div><label for="input3">S3</label><input style="width: 40px;" type="number" id="input3" min="0" max="4" value="0" oninput="updateSegment(3); calculateWMS();"></div>
+<div><label for="input4">S4</label><input style="width: 40px;" type="number" id="input4" min="0" max="4" value="0" oninput="updateSegment(4); calculateWMS();"></div>
+<div><label for="input5">S5</label><input style="width: 40px;" type="number" id="input5" min="0" max="4" value="0" oninput="updateSegment(5); calculateWMS();"></div>
+<div><label for="input6">S6</label><input style="width: 40px;" type="number" id="input6" min="0" max="4" value="0" oninput="updateSegment(6); calculateWMS();"></div>
+<div><label for="input7">S7</label><input style="width: 40px;" type="number" id="input7" min="0" max="4" value="0" oninput="updateSegment(7); calculateWMS();"></div>
+<div><label for="input8">S8</label><input style="width: 40px;" type="number" id="input8" min="0" max="4" value="0" oninput="updateSegment(8); calculateWMS();"></div>
+<div><label for="input9">S9</label><input style="width: 40px;" type="number" id="input9" min="0" max="4" value="0" oninput="updateSegment(9); calculateWMS();"></div>
+<div><label for="input10">S10</label><input style="width: 40px;" type="number" id="input10" min="0" max="4" value="0" oninput="updateSegment(10); calculateWMS();"></div>
+<div><label for="input11">S11</label><input style="width: 40px;" type="number" id="input11" min="0" max="4" value="0" oninput="updateSegment(11); calculateWMS();"></div>
+<div><label for="input12">S12</label><input style="width: 40px;" type="number" id="input12" min="0" max="4" value="0" oninput="updateSegment(12); calculateWMS();"></div>
+<div><label for="input13">S13</label><input style="width: 40px;" type="number" id="input13" min="0" max="4" value="0" oninput="updateSegment(13); calculateWMS();"></div>
+<div><label for="input14">S14</label><input style="width: 40px;" type="number" id="input14" min="0" max="4" value="0" oninput="updateSegment(14); calculateWMS();"></div>
+<div><label for="input15">S15</label><input style="width: 40px;" type="number" id="input15" min="0" max="4" value="0" oninput="updateSegment(15); calculateWMS();"></div>
+<div><label for="input16">S16</label><input style="width: 40px;" type="number" id="input16" min="0" max="4" value="0" oninput="updateSegment(16); calculateWMS();"></div>
+<div><label for="input17">S17</label><input style="width: 40px;" type="number" id="input17" min="0" max="4" value="0" oninput="updateSegment(17); calculateWMS();"></div>
+</div>
+
+<button onclick="resetSegments()">Reset</button>
+<button onclick="setAllToNormal()">Tout Normal</button>
+<button onclick="copyBullseye()">Copier l'image</button>
+
+<div id="wmsResult">WMS total : 0 | WMSI : 0.00 | FE estimée : --%</div>
+
+<script>
+const colors = { 0: "#FFFFFF", 1: "#63BE7B", 2: "#FFEB84", 3: "#FF0000", 4: "#003366" };
+
+function updateSegment(i) {
+  const seg = document.getElementById('seg' + i);
+  if (seg) {
+    const val = parseInt(document.getElementById('input' + i).value);
+    if (!isNaN(val)) {
+      seg.setAttribute('fill', colors[val]);
+    }
+  }
+}
+
+function resetSegments() {
+  for (let i = 1; i <= 17; i++) {
+    const seg = document.getElementById('seg' + i);
+    if (seg) {
+      seg.setAttribute('fill', colors[0]);
+    }
+    document.getElementById('input' + i).value = 0;
+  }
+  calculateWMS();
+}
+
+function setAllToNormal() {
+  for (let i = 1; i <= 17; i++) {
+    const seg = document.getElementById('seg' + i);
+    if (seg) {
+      seg.setAttribute('fill', colors[1]);
+    }
+    document.getElementById('input' + i).value = 1;
+  }
+  calculateWMS();
+}
+
+function calculateWMS() {
+  let total = 0;
+  let counted = 0;
+  for (let i = 1; i <= 17; i++) {
+    const val = parseInt(document.getElementById('input' + i).value);
+    if (!isNaN(val) && val > 0) {
+      total += val;
+      counted++;
+    }
+  }
+  const wmsi = counted > 0 ? (total / counted).toFixed(2) : 0.00;
+  let fe = "--";
+  if (wmsi <= 1.0) fe = "≥60";
+  else if (wmsi <= 1.2) fe = "55";
+  else if (wmsi <= 1.4) fe = "50";
+  else if (wmsi <= 1.6) fe = "45";
+  else if (wmsi <= 1.8) fe = "40";
+  else if (wmsi <= 2.0) fe = "35";
+  else if (wmsi <= 2.2) fe = "30";
+  else if (wmsi <= 2.4) fe = "25";
+  else if (wmsi <= 2.6) fe = "20";
+  else fe = "≤15";
+
+  document.getElementById('wmsResult').innerHTML = `WMS total : ${total} | WMSI : ${wmsi} | FE estimée : ${fe}%`;
+}
+
+function copyBullseye() {
+  const svgElement = document.querySelector('svg');
+  const serializer = new XMLSerializer();
+  const svgString = serializer.serializeToString(svgElement);
+  const blob = new Blob([svgString], { type: "image/svg+xml;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const img = new Image();
+
+  img.onload = function() {
+    const canvas = document.createElement("canvas");
+    canvas.width = 450;
+    canvas.height = 450;
+    const ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0);
+    canvas.toBlob(blob => {
+      navigator.clipboard.write([new ClipboardItem({ "image/png": blob })])
+        .then(() => alert("Bullseye copié ! ✅"));
+    });
+    URL.revokeObjectURL(url);
+  }
+  img.src = url;
+}
+</script>
+
+</body>
+</html>
